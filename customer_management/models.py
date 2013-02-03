@@ -7,7 +7,7 @@ class Customer(models.Model):
     contact = models.CharField(max_length=20)
     tel = models.CharField(max_length=13)
     phone = models.CharField(max_length=15)
-    email = models.EmailField()
+    email = models.EmailField(blank=True)
     
     def __unicode__(self):
         return self.code + " : " + self.company_name
