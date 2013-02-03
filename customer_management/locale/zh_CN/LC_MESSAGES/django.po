@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-03 23:27+0800\n"
+"POT-Creation-Date: 2013-02-04 00:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,34 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:5
+msgid "Code"
+msgstr "客户编码"
+
+#: models.py:6
+msgid "Company Name"
+msgstr "公司名称"
+
+#: models.py:7
+msgid "Contact Address"
+msgstr "联系地址"
+
+#: models.py:8
+msgid "Contact"
+msgstr "联系人"
+
+#: models.py:9
+msgid "Telephone"
+msgstr "固定电话"
+
+#: models.py:10
+msgid "Mobile"
+msgstr "手机"
+
+#: models.py:11
+msgid "Email"
+msgstr "电子邮箱"
 
 #: models.py:17
 msgid "Customer"

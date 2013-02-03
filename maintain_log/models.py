@@ -5,17 +5,18 @@ from express_management.models import ExpressDelivery
 from django.utils.translation import gettext_lazy as _
 
 class MaintainLog(models.Model):
-    customer = models.ForeignKey(Customer)
-    product = models.ForeignKey(Product)
-    code = models.CharField(max_length=50)
-    manufacture_date = models.DateField()
-    carry_date = models.DateField()
-    bug_find_by_customer = models.TextField()
-    result = models.TextField()
-    maintain_date = models.DateField()
-    receive_express_number = models.CharField(max_length=50)
-    invoice_number = models.CharField(max_length=50)
-    express = models.ForeignKey(ExpressDelivery)
+    customer = models.ForeignKey(Customer, verbose_name=_('Customer'))
+    product = models.ForeignKey(Product, verbose_name=_('Product'))
+    code = models.CharField(_('Maintain Code'), max_length=50)
+    manufacture_date = models.DateField(_('Manufacture Date'))
+    carry_date = models.DateField(_('Carry Date'))
+    bug_find_by_customer = models.TextField(_('Bug Found By Customer'))
+    result = models.TextField(_('Maintain Result'))
+    maintain_date = models.DateField(_('Maintain Date'))
+    receive_express_number = models.CharField(_('Receive Express Number'), 
+                                              max_length=50)
+    invoice_number = models.CharField(_('Invoice Number'), max_length=50)
+    express = models.ForeignKey(ExpressDelivery, verbose_name=_('Express Delivery'))
     
     def __unicode__(self):
         return (unicode(self.customer) + " " + 
@@ -28,9 +29,9 @@ class MaintainLog(models.Model):
         
         
 class MaintainBug(models.Model):
-    maintain_log = models.ForeignKey(MaintainLog)
-    bug_type = models.ForeignKey(BugType)
-    description = models.TextField()
+    maintain_log = models.ForeignKey(MaintainLog, verbose_name=_('Maintain Log'))
+    bug_type = models.ForeignKey(BugType, verbose_name=_('Bug Type'))
+    description = models.TextField(_('Description'))
     
     def __unicode__(self):
         return unicode(self.maintain_log) + " : " + unicode(self.bug_type)

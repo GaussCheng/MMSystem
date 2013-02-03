@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-03 23:29+0800\n"
+"POT-Creation-Date: 2013-02-04 00:26+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models.py:12 models.py:13
+#: models.py:5
+msgid "Type Name"
+msgstr "类型名"
+
+#: models.py:6
+msgid "Description"
+msgstr "描述"
+
+#: models.py:12 models.py:13 models.py:22
 msgid "Bug Types"
 msgstr "故障类型"
 
-#: models.py:24
+#: models.py:16
+msgid "Model"
+msgstr "型号"
+
+#: models.py:17
+msgid "Display Name"
+msgstr "显示名"
+
+#: models.py:18
+msgid "Version"
+msgstr "版本号"
+
+#: models.py:19
+msgid "Release Date"
+msgstr "发布日期"
+
+#: models.py:26
 msgid "Product"
 msgstr "产品"
 
-#: models.py:25
+#: models.py:27
 msgid "Products"
 msgstr "产品清单"
