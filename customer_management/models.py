@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 class Customer(models.Model):
     code = models.CharField(max_length=10, primary_key=True)
@@ -11,3 +12,7 @@ class Customer(models.Model):
     
     def __unicode__(self):
         return self.code + " : " + self.company_name
+    
+    class Meta:
+        verbose_name = _('Customer')
+        verbose_name_plural = _('Customers')

@@ -2,8 +2,7 @@ from django.db import models
 from customer_management.models import Customer
 from product_management.models import Product, BugType
 from express_management.models import ExpressDelivery
-from django.db.models.fields import proxy
-from django.db.models import Q
+from django.utils.translation import gettext_lazy as _
 
 class MaintainLog(models.Model):
     customer = models.ForeignKey(Customer)
@@ -22,6 +21,10 @@ class MaintainLog(models.Model):
         return (unicode(self.customer) + " " + 
                 unicode(self.product) + " " +
                 self.code)
+        
+    class Meta:
+        verbose_name = _('Maintain Log')
+        verbose_name_plural = _('Maintain Logs')
         
         
 class MaintainBug(models.Model):

@@ -1,8 +1,12 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 class ExpressDelivery(models.Model):
-    name = models.CharField(max_length=50)
-    tel = models.CharField(max_length=15, blank=True)
+    name = models.CharField(_('Name'), max_length=50)
+    tel = models.CharField(_('Tel'), max_length=15, blank=True)
     
     def __unicode__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = _('Express Delivery Company')
+        verbose_name_plural = _('Express Delivery Companys')

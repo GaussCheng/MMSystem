@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 class BugType(models.Model):
     name = models.CharField(max_length=100)
@@ -6,6 +7,10 @@ class BugType(models.Model):
     
     def __unicode__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = _('Bug Types')
+        verbose_name_plural = _('Bug Types')
     
 class Product(models.Model):
     model = models.CharField(max_length=50)
@@ -16,6 +21,8 @@ class Product(models.Model):
     
     class Meta:
         unique_together = ('model', 'version')
+        verbose_name = _('Product')
+        verbose_name_plural = _('Products')
     
     
     def __unicode__(self):
