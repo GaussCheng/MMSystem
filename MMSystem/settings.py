@@ -103,6 +103,7 @@ ROOT_URLCONF = 'MMSystem.urls'
 WSGI_APPLICATION = 'MMSystem.wsgi.application'
 
 TEMPLATE_DIRS = (
+    'F:/workspace/MMSystem/szhc_templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -119,7 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'south',
+#    'south',
     'customer_management',
     'express_management',
     'product_management',

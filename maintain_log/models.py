@@ -1,7 +1,9 @@
 from django.db import models
 from customer_management.models import Customer
-from product_management.models import Product
+from product_management.models import Product, BugType
 from express_management.models import ExpressDelivery
+from django.db.models.fields import proxy
+from django.db.models import Q
 
 class MaintainLog(models.Model):
     customer = models.ForeignKey(Customer)
@@ -10,7 +12,6 @@ class MaintainLog(models.Model):
     manufacture_date = models.DateField()
     carry_date = models.DateField()
     bug_find_by_customer = models.TextField()
-    bug_find_by_tester = models.TextField()
     result = models.TextField()
     maintain_date = models.DateField()
     receive_express_number = models.CharField(max_length=50)
@@ -21,4 +22,14 @@ class MaintainLog(models.Model):
         return (unicode(self.customer) + " " + 
                 unicode(self.product) + " " +
                 self.code)
+        
+        
+class MaintainBug(models.Model):
+    maintain_log = models.ForeignKey(MaintainLog)
+    bug_type = models.ForeignKey(BugType)
+    description = models.TextField()
+    
+    def __unicode__(self):
+        return unicode(self.maintain_log) + " : " + unicode(self.bug_type)
+
         
