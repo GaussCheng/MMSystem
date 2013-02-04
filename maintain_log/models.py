@@ -27,10 +27,16 @@ class MaintainLog(models.Model):
         verbose_name = _('Maintain Log')
         verbose_name_plural = _('Maintain Logs')
         
+    def bug_type(self):
+        return self.maintainbug_set.get(maintain_log = self).bug_type
+    bug_type.short_description = _('Bug Type')
+        
         
 class MaintainBug(models.Model):
-    maintain_log = models.ForeignKey(MaintainLog, verbose_name=_('Maintain Log'))
-    bug_type = models.ForeignKey(BugType, verbose_name=_('Bug Type'))
+    maintain_log = models.ForeignKey(MaintainLog, 
+                                     verbose_name=_('Maintain Log'))
+    bug_type = models.ForeignKey(BugType,
+                                 verbose_name=_('Bug Type'))
     description = models.TextField(_('Description'))
     
     def __unicode__(self):

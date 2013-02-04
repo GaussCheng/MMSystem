@@ -17,9 +17,9 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1359905962406</id>
+			<id>1359986241592</id>
 			<name></name>
-			<type>30</type>
+			<type>22</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
 				<arguments>1.0-name-matches-false-false-*.mo</arguments>

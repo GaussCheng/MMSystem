@@ -11,6 +11,7 @@ class MaintainBugInline(admin.StackedInline):
     verbose_name_plural = _('Maintain Bugs')
 
 class MaintainLogdmin(admin.ModelAdmin):
+    raw_id_fields = ['customer']
     fieldsets = [
         (None,   {'fields': ['code']}),
         (_('Product Information'), {'fields': ['product', 'manufacture_date']}),
@@ -22,8 +23,27 @@ class MaintainLogdmin(admin.ModelAdmin):
     ]
     inlines = [MaintainBugInline]
     
-    list_display = ('code', 'product', 'customer', 'carry_date')
-    list_filter = ['carry_date', 'maintain_date']
-    search_fields = ['bug_find_by_customer', 'result']
+    
+    list_display = ('code', 
+                    'product', 
+                    'customer', 
+                    'bug_type', 
+                    'carry_date',
+                    'maintain_date',
+                    'result')
+    list_filter = ['product__model', 
+                   'customer__company_name',
+                   'maintainbug__bug_type',
+                   'carry_date', 
+                   'maintain_date']
+    search_fields = ['product__model', 
+                     '^product__version',
+                     '^customer__code',
+                     'customer__company_name',
+                     'bug_find_by_customer',
+                     'maintainbug__description',
+                     'code',
+                     'result']
+    date_hierarchy = 'maintain_date'
     
 admin.site.register(MaintainLog, MaintainLogdmin)
