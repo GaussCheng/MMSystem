@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 class ExpressDelivery(models.Model):
     name = models.CharField(_('Express Name'), max_length=50)
     tel = models.CharField(_('Tel'), max_length=15, blank=True)

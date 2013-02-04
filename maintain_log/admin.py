@@ -2,20 +2,22 @@
 
 from maintain_log.models import MaintainLog, MaintainBug
 from django.contrib import admin
-from django.forms.models import fields_for_model
+from django.utils.translation import ugettext as _
 
 class MaintainBugInline(admin.StackedInline):
     model = MaintainBug
     extra = 1
+    verbose_name = _('Maintain Bug')
+    verbose_name_plural = _('Maintain Bugs')
 
 class MaintainLogdmin(admin.ModelAdmin):
     fieldsets = [
         (None,   {'fields': ['code']}),
-        (('Product Information'), {'fields': ['product', 'manufacture_date']}),
-        (('Customer Information'), {'fields': ['customer']}),
-        (('Maintain Information'), {'fields': ['carry_date', 'bug_find_by_customer',
+        (_('Product Information'), {'fields': ['product', 'manufacture_date']}),
+        (_('Customer Information'), {'fields': ['customer']}),
+        (_('Maintain Information'), {'fields': ['carry_date', 'bug_find_by_customer',
                                           'result', 'maintain_date']}),
-        (('Invoice Information'), {'fields': ['receive_express_number', 
+        (_('Invoice Information'), {'fields': ['receive_express_number', 
                                           'invoice_number', 'express']})
     ]
     inlines = [MaintainBugInline]

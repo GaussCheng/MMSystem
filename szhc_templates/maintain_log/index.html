@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Maintain Logs</title>
+    </head>
+    {% load i18n %}
+    <body>
+        <table border="1">
+            <th>{% trans 'Customer' %}</th>
+            <th>{% trans 'Product' %}</th>
+            <th>{% trans 'Maintain Code' %}</th>
+            <th>{% trans 'Manufacture Date' %}</th>
+            <th>{% trans 'Carry Date' %}</th>
+            <th>{% trans 'Bug Found By Customer' %}</th>
+            <th>{% trans 'Bug Found By Tester' %}</th>
+            <th>{% trans 'Maintain Result' %}</th>
+            <th>{% trans 'Maintain Date' %}</th>
+            <th>{% trans 'Receive Express Number' %}</th>
+            <th>{% trans 'Invoice Number' %}</th>
+            <th>{% trans 'Express Delivery' %}</th>
+        {% if maintain_logs %}
+            {% for log in maintain_logs %}
+            <tr>
+                <td>{{ log.customer }}</td>
+                <td>{{ log.product }}</td>
+                <td>{{ log.code }}</td>
+                <td>{{ log.manufacture_date }}</td>
+                <td>{{ log.carry_date }}</td>
+                <td>{{ log.bug_find_by_customer }}</td>
+                <td>
+                {% if bugs %}
+                    {% for bug in bugs %}
+                        {{ bug.bug_type }} : {{ bug.description }}
+                    {% endfor %}
+                {% endif %}
+                </td>
+                <td>{{ log.result }}</td>
+                <td>{{ log.maintain_date }}</td>
+                <td>{{ log.receive_express_number }}</td>
+                <td>{{ log.invoice_number }}</td>
+                <td>{{ log.express }}</td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+        </table>
+    </body>
+</html>
+

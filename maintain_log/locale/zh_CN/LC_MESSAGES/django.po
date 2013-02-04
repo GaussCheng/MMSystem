@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-04 00:33+0800\n"
+"POT-Creation-Date: 2013-02-04 21:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:10
+msgid "Maintain Bug"
+msgstr "维修故障"
+
+#: admin.py:11
+msgid "Maintain Bugs"
+msgstr "维修故障清单"
+
+#: admin.py:16
+msgid "Product Information"
+msgstr "产品信息"
+
+#: admin.py:17
+msgid "Customer Information"
+msgstr "客户信息"
+
+#: admin.py:18
+msgid "Maintain Information"
+msgstr "维修信息"
+
+#: admin.py:20
+msgid "Invoice Information"
+msgstr "发货信息"
 
 #: models.py:8
 msgid "Customer"
@@ -40,6 +64,9 @@ msgstr "返修日期"
 #: models.py:13
 msgid "Bug Found By Customer"
 msgstr "客户注明故障"
+
+msgid "Bug Found By Tester"
+msgstr "测试故障现象"
 
 #: models.py:14
 msgid "Maintain Result"

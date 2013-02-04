@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 class BugType(models.Model):
     name = models.CharField(_('Type Name'), max_length=100)
