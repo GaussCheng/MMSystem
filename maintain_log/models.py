@@ -28,7 +28,8 @@ class MaintainLog(models.Model):
         verbose_name_plural = _('Maintain Logs')
         
     def bug_type(self):
-        return self.maintainbug_set.get(maintain_log = self).bug_type
+        maintain_bugs =  self.maintainbug_set.filter(maintain_log = self)
+        return " : ".join(unicode(maintain_bug.bug_type) for maintain_bug in maintain_bugs)
     bug_type.short_description = _('Bug Type')
         
         

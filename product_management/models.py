@@ -29,4 +29,10 @@ class Product(models.Model):
     
     def __unicode__(self):
         return self.model + " : " + self.version
+    
+    def bound_bug_types(self):
+        bugtypes = self.bug_types.all()
+        return " : ".join(unicode(bug_type) for bug_type in bugtypes)
+    bound_bug_types.short_description = _('Bug Types')
+
 

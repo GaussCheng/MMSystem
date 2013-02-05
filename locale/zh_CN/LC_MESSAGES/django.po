@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-03 23:03+0800\n"
+"POT-Creation-Date: 2013-02-05 01:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +16,166 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: customer_management/models.py:18
+#: customer_management/models.py:5
+msgid "Code"
+msgstr ""
+
+#: customer_management/models.py:6
+msgid "Company Name"
+msgstr ""
+
+#: customer_management/models.py:7
+msgid "Contact Address"
+msgstr ""
+
+#: customer_management/models.py:8
+msgid "Contact"
+msgstr ""
+
+#: customer_management/models.py:9
+msgid "Telephone"
+msgstr ""
+
+#: customer_management/models.py:10
+msgid "Mobile"
+msgstr ""
+
+#: customer_management/models.py:11
+msgid "Email"
+msgstr ""
+
+#: customer_management/models.py:17 maintain_log/models.py:8
+#: szhc_templates/maintain_log/index.html:11
 msgid "Customer"
 msgstr ""
 
-#: customer_management/models.py:19
+#: customer_management/models.py:18
 msgid "Customers"
 msgstr ""
 
-#: express_management/models.py:5
-msgid "Name"
+#: express_management/models.py:4
+msgid "Express Name"
 msgstr ""
 
-#: express_management/models.py:6
+#: express_management/models.py:5
 msgid "Tel"
 msgstr ""
 
-#: express_management/models.py:12
+#: express_management/models.py:11
 msgid "Express Delivery Company"
 msgstr ""
 
-#: express_management/models.py:13
+#: express_management/models.py:12
 msgid "Express Delivery Companys"
 msgstr ""
 
-#: maintain_log/models.py:26
-msgid "Maintain Log"
+#: maintain_log/admin.py:10
+msgid "Maintain Bug"
 msgstr ""
 
-#: maintain_log/models.py:27
-msgid "Maintain Logs"
+#: maintain_log/admin.py:11
+msgid "Maintain Bugs"
 msgstr ""
 
-#: product_management/models.py:12 product_management/models.py:13
-msgid "Bug Types"
+#: maintain_log/admin.py:17
+msgid "Product Information"
 msgstr ""
 
-#: product_management/models.py:24
+#: maintain_log/admin.py:18
+msgid "Customer Information"
+msgstr ""
+
+#: maintain_log/admin.py:19
+msgid "Maintain Information"
+msgstr ""
+
+#: maintain_log/admin.py:21
+msgid "Invoice Information"
+msgstr ""
+
+#: maintain_log/models.py:9 product_management/models.py:26
+#: szhc_templates/maintain_log/index.html:12
 msgid "Product"
 msgstr ""
 
-#: product_management/models.py:25
+#: maintain_log/models.py:10 szhc_templates/maintain_log/index.html:13
+msgid "Maintain Code"
+msgstr ""
+
+#: maintain_log/models.py:11 szhc_templates/maintain_log/index.html:14
+msgid "Manufacture Date"
+msgstr ""
+
+#: maintain_log/models.py:12 szhc_templates/maintain_log/index.html:15
+msgid "Carry Date"
+msgstr ""
+
+#: maintain_log/models.py:13 szhc_templates/maintain_log/index.html:16
+msgid "Bug Found By Customer"
+msgstr ""
+
+#: maintain_log/models.py:14 szhc_templates/maintain_log/index.html:18
+msgid "Maintain Result"
+msgstr ""
+
+#: maintain_log/models.py:15 szhc_templates/maintain_log/index.html:19
+msgid "Maintain Date"
+msgstr ""
+
+#: maintain_log/models.py:16 szhc_templates/maintain_log/index.html:20
+msgid "Receive Express Number"
+msgstr ""
+
+#: maintain_log/models.py:18 szhc_templates/maintain_log/index.html:21
+msgid "Invoice Number"
+msgstr ""
+
+#: maintain_log/models.py:19 szhc_templates/maintain_log/index.html:22
+msgid "Express Delivery"
+msgstr ""
+
+#: maintain_log/models.py:27 maintain_log/models.py:37
+msgid "Maintain Log"
+msgstr ""
+
+#: maintain_log/models.py:28
+msgid "Maintain Logs"
+msgstr ""
+
+#: maintain_log/models.py:32 maintain_log/models.py:39
+msgid "Bug Type"
+msgstr ""
+
+#: maintain_log/models.py:40 product_management/models.py:6
+msgid "Description"
+msgstr ""
+
+#: product_management/models.py:5
+msgid "Type Name"
+msgstr ""
+
+#: product_management/models.py:12 product_management/models.py:13
+#: product_management/models.py:22
+msgid "Bug Types"
+msgstr ""
+
+#: product_management/models.py:16
+msgid "Model"
+msgstr ""
+
+#: product_management/models.py:17
+msgid "Display Name"
+msgstr ""
+
+#: product_management/models.py:18
+msgid "Version"
+msgstr ""
+
+#: product_management/models.py:19
+msgid "Release Date"
+msgstr ""
+
+#: product_management/models.py:27
 msgid "Products"
 msgstr ""
 
@@ -127,7 +245,6 @@ msgid "Clear selection"
 msgstr ""
 
 #: szhc_templates/admin/app_index.html:11 szhc_templates/admin/index.html:19
-#: szhc_templates/admin/index.html.py:25
 #, python-format
 msgid "%(name)s"
 msgstr ""
@@ -158,11 +275,11 @@ msgstr ""
 
 #: szhc_templates/admin/base_site.html:4
 msgid "MMSystem site admin"
-msgstr ""
+msgstr "维修系统网站管理"
 
 #: szhc_templates/admin/base_site.html:7
 msgid "MMSystem administration"
-msgstr ""
+msgstr "维修系统管理"
 
 #: szhc_templates/admin/change_form.html:24 szhc_templates/admin/index.html:29
 msgid "Add"
@@ -277,10 +394,6 @@ msgstr ""
 #, python-format
 msgid "Models available in the %(name)s application."
 msgstr ""
-
-#: szhc_templates/admin/index.html:23
-msgid "Gauss"
-msgstr "程国醒"
 
 #: szhc_templates/admin/index.html:35
 msgid "Change"
@@ -428,6 +541,10 @@ msgstr ""
 msgid "Delete?"
 msgstr ""
 
+#: szhc_templates/maintain_log/index.html:17
+msgid "Bug Found By Tester"
+msgstr ""
+
 #: szhc_templates/registration/logged_out.html:9
 msgid "Thanks for spending some quality time with the Web site today."
 msgstr ""
@@ -569,3 +686,6 @@ msgstr ""
 #: szhc_templates/registration/password_reset_form.html:22
 msgid "Reset my password"
 msgstr ""
+
+#~ msgid "Gauss"
+#~ msgstr "程国醒"
