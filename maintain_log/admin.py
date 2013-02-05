@@ -25,6 +25,7 @@ class MaintainBugInline(admin.StackedInline):
 #    raw_id_fields = ['bug_type']
 
 class MaintainLogdmin(admin.ModelAdmin):
+    save_on_top = True
     raw_id_fields = ['customer']
     fieldsets = [
         (None,   {'fields': ['code']}),
