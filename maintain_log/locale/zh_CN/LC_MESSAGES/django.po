@@ -101,5 +101,5 @@ msgstr "故障类型"
 msgid "Description"
 msgstr "描述"
 
-#~ msgid "Bug Found By Tester"
-#~ msgstr "测试故障现象"
+msgid "Bug Found By Tester"
+msgstr "测试故障现象"

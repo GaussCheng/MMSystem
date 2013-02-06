@@ -30,11 +30,13 @@
                 <td>{{ log.carry_date }}</td>
                 <td>{{ log.bug_find_by_customer }}</td>
                 <td>
-                {% if bugs %}
-                    {% for bug in bugs %}
+                    <ul>
+                    {% for bug in log.maintainbug_set.all %}
+                        <li>
                         {{ bug.bug_type }} : {{ bug.description }}
+                        </li>
                     {% endfor %}
-                {% endif %}
+                    </ul>
                 </td>
                 <td>{{ log.result }}</td>
                 <td>{{ log.maintain_date }}</td>

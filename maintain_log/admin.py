@@ -4,6 +4,7 @@ from maintain_log.models import MaintainLog, MaintainBug
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 from django import forms
+from maintain_log import views
 
 class MaintainBugForm(forms.ModelForm):
     bug_types = None
@@ -24,9 +25,20 @@ class MaintainBugInline(admin.StackedInline):
 #    form = MaintainBugForm
 #    raw_id_fields = ['bug_type']
 
+def print_data(modeladmin, request, queryset):
+    return views.index(request, queryset)
+    
+print_data.short_description = _('Print selected data')
+
+def export_to_excel(modeladmin, request, queryset):
+    print "run"
+    
+export_to_excel.short_description = _('Export to excel')
+
 class MaintainLogdmin(admin.ModelAdmin):
     save_on_top = True
     raw_id_fields = ['customer']
+    actions = [print_data, export_to_excel]
     fieldsets = [
         (None,   {'fields': ['code']}),
         (_('Product Information'), {'fields': ['product', 'manufacture_date']}),
