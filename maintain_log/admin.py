@@ -26,12 +26,12 @@ class MaintainBugInline(admin.StackedInline):
 #    raw_id_fields = ['bug_type']
 
 def print_data(modeladmin, request, queryset):
-    return views.index(request, queryset)
+    return views.print_to_html(request, queryset)
     
 print_data.short_description = _('Print selected data')
 
 def export_to_excel(modeladmin, request, queryset):
-    print "run"
+    return views.export_to_excel(request, queryset)
     
 export_to_excel.short_description = _('Export to excel')
 

@@ -7,16 +7,17 @@
     </head>
     {% load i18n %}
     <body>
-        <table border="1">
-            <th>{% trans 'Customer' %}</th>
-            <th>{% trans 'Product' %}</th>
+        <h1 align="center">{% trans 'Maintain logs' %}</h1>
+        <table border="1" cellpadding="0" cellspacing="0">
+            <th width="120px">{% trans 'Customer' %}</th>
+            <th width="130px">{% trans 'Product' %}</th>
             <th>{% trans 'Maintain Code' %}</th>
-            <th>{% trans 'Manufacture Date' %}</th>
-            <th>{% trans 'Carry Date' %}</th>
-            <th>{% trans 'Bug Found By Customer' %}</th>
-            <th>{% trans 'Bug Found By Tester' %}</th>
-            <th>{% trans 'Maintain Result' %}</th>
-            <th>{% trans 'Maintain Date' %}</th>
+            <th width="130px">{% trans 'Manufacture Date' %}</th>
+            <th width="130px">{% trans 'Carry Date' %}</th>
+            <th width="150px">{% trans 'Bug Found By Customer' %}</th>
+            <th width="300px">{% trans 'Bug Found By Tester' %}</th>
+            <th width="300px">{% trans 'Maintain Result' %}</th>
+            <th width="130px">{% trans 'Maintain Date' %}</th>
             <th>{% trans 'Receive Express Number' %}</th>
             <th>{% trans 'Invoice Number' %}</th>
             <th>{% trans 'Express Delivery' %}</th>
@@ -25,9 +26,9 @@
             <tr>
                 <td>{{ log.customer }}</td>
                 <td>{{ log.product }}</td>
-                <td>{{ log.code }}</td>
-                <td>{{ log.manufacture_date }}</td>
-                <td>{{ log.carry_date }}</td>
+                <td align="center">{{ log.code }}</td>
+                <td align="center">{{ log.manufacture_date }}</td>
+                <td align="center">{{ log.carry_date }}</td>
                 <td>{{ log.bug_find_by_customer }}</td>
                 <td>
                     <ul>
@@ -39,7 +40,7 @@
                     </ul>
                 </td>
                 <td>{{ log.result }}</td>
-                <td>{{ log.maintain_date }}</td>
+                <td align="center">{{ log.maintain_date }}</td>
                 <td>{{ log.receive_express_number }}</td>
                 <td>{{ log.invoice_number }}</td>
                 <td>{{ log.express }}</td>
