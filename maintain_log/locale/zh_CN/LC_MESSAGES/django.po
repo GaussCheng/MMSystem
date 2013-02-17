@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-04 22:54+0800\n"
+"POT-Creation-Date: 2013-02-17 17:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:10
+#: admin.py:23
 msgid "Maintain Bug"
 msgstr "维修故障"
 
-#: admin.py:11
+#: admin.py:24
 msgid "Maintain Bugs"
 msgstr "维修故障清单"
 
-#: admin.py:16
+#: admin.py:31
+msgid "Print selected data"
+msgstr "打印选中的数据"
+
+#: admin.py:36
+msgid "Export to excel"
+msgstr "导出选中的数据到Excel"
+
+#: admin.py:44
 msgid "Product Information"
 msgstr "产品信息"
 
-#: admin.py:17
+#: admin.py:45
 msgid "Customer Information"
 msgstr "客户信息"
 
-#: admin.py:18
+#: admin.py:46
 msgid "Maintain Information"
 msgstr "维修信息"
 
-#: admin.py:20
+#: admin.py:48
 msgid "Invoice Information"
 msgstr "发货信息"
 
-#: models.py:8
+#: models.py:8 views.py:48
 msgid "Customer"
 msgstr "客户"
 
-#: models.py:9
+#: models.py:9 views.py:49
 msgid "Product"
 msgstr "产品"
 
@@ -53,15 +61,15 @@ msgstr "产品"
 msgid "Maintain Code"
 msgstr "维修编号"
 
-#: models.py:11
+#: models.py:11 views.py:51
 msgid "Manufacture Date"
 msgstr "出厂日期"
 
-#: models.py:12
+#: models.py:12 views.py:52
 msgid "Carry Date"
 msgstr "返修日期"
 
-#: models.py:13
+#: models.py:13 views.py:53
 msgid "Bug Found By Customer"
 msgstr "客户注明故障"
 
@@ -69,23 +77,23 @@ msgstr "客户注明故障"
 msgid "Maintain Result"
 msgstr "维修结果"
 
-#: models.py:15
+#: models.py:15 views.py:55
 msgid "Maintain Date"
 msgstr "维修日期"
 
-#: models.py:16
+#: models.py:16 views.py:56
 msgid "Receive Express Number"
 msgstr "收货快递单号"
 
-#: models.py:18
+#: models.py:18 views.py:57
 msgid "Invoice Number"
 msgstr "发货单号"
 
-#: models.py:19
+#: models.py:19 views.py:58
 msgid "Express Delivery"
 msgstr "快递公司"
 
-#: models.py:27 models.py:36
+#: models.py:27 models.py:38
 msgid "Maintain Log"
 msgstr "维修记录"
 
@@ -93,13 +101,18 @@ msgstr "维修记录"
 msgid "Maintain Logs"
 msgstr "维修记录清单"
 
-#: models.py:32 models.py:37
+#: models.py:33 models.py:40
 msgid "Bug Type"
 msgstr "故障类型"
 
-#: models.py:38
+#: models.py:41
 msgid "Description"
 msgstr "描述"
 
+#: views.py:50
+msgid "Code"
+msgstr ""
+
+#: views.py:54
 msgid "Bug Found By Tester"
 msgstr "测试故障现象"
