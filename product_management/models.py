@@ -4,6 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 class BugType(models.Model):
     name = models.CharField(_('Type Name'), max_length=100)
     decription = models.TextField(_('Description'), blank=True)
+    note = models.TextField(_('Note'))
     
     def __unicode__(self):
         return self.name
@@ -20,6 +21,7 @@ class Product(models.Model):
     bug_types = models.ManyToManyField(BugType, 
                                        blank=True, 
                                        verbose_name=_('Bug Types'))
+    note = models.TextField(_('Note'))
     
     class Meta:
         unique_together = ('model', 'version')
