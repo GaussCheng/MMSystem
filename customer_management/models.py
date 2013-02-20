@@ -15,6 +15,9 @@ class Customer(models.Model):
     def __unicode__(self):
         return self.code + " : " + self.company_name
     
+    def class_name(self):
+        return "customer"
+    
     class Meta:
         verbose_name = _('Customer')
         verbose_name_plural = _('Customers')
