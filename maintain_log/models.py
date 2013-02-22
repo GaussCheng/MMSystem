@@ -13,10 +13,14 @@ class MaintainLog(models.Model):
     bug_find_by_customer = models.TextField(_('Bug Found By Customer'))
     result = models.TextField(_('Maintain Result'))
     maintain_date = models.DateField(_('Maintain Date'))
+    receive_express = models.ForeignKey(ExpressDelivery, 
+                                        verbose_name=_('Receive Express Delivery'),
+                                        related_name="FK_RECEIVE_EXPRESS")
     receive_express_number = models.CharField(_('Receive Express Number'), 
                                               max_length=50)
     invoice_number = models.CharField(_('Invoice Number'), max_length=50)
     express = models.ForeignKey(ExpressDelivery, verbose_name=_('Express Delivery'))
+    note = models.TextField(_('Note'), blank=True)
     
     def __unicode__(self):
         return (unicode(self.customer) + " " + 
