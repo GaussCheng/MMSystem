@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-04 00:11+0800\n"
+"POT-Creation-Date: 2013-02-23 22:43+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:48
+msgid "Print selected customers using LHT"
+msgstr "用联昊通模版打印选择的客户清单"
+
+#: admin.py:53
+msgid "Print selected customers using SF"
+msgstr "用顺风模版打印选择的客户清单"
+
+#: admin.py:58
+msgid "Print selected customers using SUER"
+msgstr "用速尔模版打印选择的客户清单"
 
 #: models.py:5
 msgid "Code"
@@ -42,13 +54,49 @@ msgid "Mobile"
 msgstr "手机"
 
 #: models.py:11
+msgid "Fax"
+msgstr "传真"
+
+#: models.py:12
 msgid "Email"
 msgstr "电子邮箱"
 
-#: models.py:17
+#: models.py:13
+msgid "Note"
+msgstr "备注"
+
+#: models.py:22
 msgid "Customer"
 msgstr "客户"
 
-#: models.py:18
+#: models.py:23
 msgid "Customers"
 msgstr "客户清单"
+
+#: models.py:25
+msgid "Can see the customer"
+msgstr "可查看客户"
+
+#: models.py:26
+msgid "Can see the customer contact"
+msgstr "可查看客户联系人"
+
+#: models.py:27
+msgid "Can see the customer address"
+msgstr "可查看客户地址"
+
+#: models.py:28
+msgid "Can see the customer telephone"
+msgstr "可查看客户固话"
+
+#: models.py:29
+msgid "Can see the customer phone"
+msgstr "可查看客户手机"
+
+#: models.py:30
+msgid "Can see the customer fax"
+msgstr "可查看客户传真"
+
+#: models.py:31
+msgid "Can see the customer email"
+msgstr "可查看客户邮箱"

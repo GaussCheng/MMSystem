@@ -2,7 +2,7 @@
 
 import socket
 
-if socket.gethostname() == 'GaussCheng-FedoraPC':
+if socket.gethostname() == 'GaussCheng-HOME-Fedora':
     DEBUG = True
     TEMPLATE_DEBUG = DEBUG
     

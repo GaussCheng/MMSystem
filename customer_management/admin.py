@@ -1,8 +1,10 @@
 from customer_management.models import Customer
+from customer_management import views
 from django.contrib import admin
 
+from django.shortcuts import redirect
 from django.core.exceptions import PermissionDenied
- 
+from django.utils.translation import ugettext as _
  
 class ReadOnlyModelAdmin(admin.ModelAdmin):
      
@@ -40,9 +42,28 @@ class ReadOnlyModelAdmin(admin.ModelAdmin):
         return ret
 
 
+def print_customers_use_lht(modeladmin, request, queryset):
+    return views.print_customers_use_lht(request, queryset)
+    
+print_customers_use_lht.short_description = _('Print selected customers using LHT')
+
+def print_customers_use_sf(modeladmin, request, queryset):
+    return views.print_customers_use_sf(request, queryset)
+
+print_customers_use_sf.short_description = _('Print selected customers using SF')
+
+def print_customers_use_suer(modeladmin, request, queryset):
+    return views.print_customers_use_suer(request, queryset)
+
+print_customers_use_suer.short_description = _('Print selected customers using SUER')
+    
+
 class CustomerAdmin(ReadOnlyModelAdmin):
     list_display = ('code', 'company_name')
     search_fields = ['code', 'company_name', 'contact', 'addr', 'fax']
+    actions = [print_customers_use_lht, 
+               print_customers_use_sf, 
+               print_customers_use_suer]
     
     def get_list_display(self, request):
         ret_list_display = ['code', 'company_name']
