@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -22,11 +24,11 @@ class Customer(models.Model):
         verbose_name = _('Customer')
         verbose_name_plural = _('Customers')
         permissions = (
-            ("view_customer", _("Can see the customer")),
-            ("view_contact", _("Can see the customer contact")),
-            ("view_addr", _("Can see the customer address")),
-            ("view_tel", _("Can see the customer telephone")),
-            ("view_phone", _("Can see the customer phone")),
-            ("view_fax", _("Can see the customer fax")),
-            ("view_email", _("Can see the customer email"))
+            ("view_customer", _("可以查看客户")),
+            ("view_contact", _("可以查看客户联系人")),
+            ("view_addr", _("可以查看客户地址")),
+            ("view_tel", _("可以查看客户固话")),
+            ("view_phone", _("可以查看客户手机")),
+            ("view_fax", _("可以查看客户传真")),
+            ("view_email", _("可以查看客户邮箱"))
         )
