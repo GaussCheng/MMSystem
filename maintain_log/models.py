@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.db import models
 from customer_management.models import Customer
 from product_management.models import Product, BugType
@@ -30,6 +32,12 @@ class MaintainLog(models.Model):
     class Meta:
         verbose_name = _('Maintain Log')
         verbose_name_plural = _('Maintain Logs')
+        permissions = (
+            ("view_result", _("查看维修结果")),
+            ("view_maintainLog", _("查看维修记录")),
+            ("print_log", _("打印维修记录")),
+            ("export_log", _("导出维修记录"))
+        )
         
     def bug_type(self):
         maintain_bugs =  self.maintainbug_set.filter(maintain_log = self)

@@ -24,11 +24,12 @@ class Customer(models.Model):
         verbose_name = _('Customer')
         verbose_name_plural = _('Customers')
         permissions = (
-            ("view_customer", _("可以查看客户")),
-            ("view_contact", _("可以查看客户联系人")),
-            ("view_addr", _("可以查看客户地址")),
-            ("view_tel", _("可以查看客户固话")),
-            ("view_phone", _("可以查看客户手机")),
-            ("view_fax", _("可以查看客户传真")),
-            ("view_email", _("可以查看客户邮箱"))
+            ("view_customer", _("查看客户")),
+            ("view_contact", _("查看客户联系人")),
+            ("view_addr", _("查看客户地址")),
+            ("view_tel", _("查看客户固话")),
+            ("view_phone", _("查看客户手机")),
+            ("view_fax", _("查看客户传真")),
+            ("view_email", _("查看客户邮箱")),
+            ("print_express_info", _("打印快递单"))
         )

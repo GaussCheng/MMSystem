@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="zh-cn" http-equiv="Content-Language">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+{% if customer %}
+   <title>联昊通|{{ customer.company_name }}</title> 
+{% else %}
+   <title>联昊通</title>
+{% endif %}
+<style type="text/css">
+body{
+	width:800px;
+	height:480px;
+	margin:0px 0px;
+}
+h4,h5,label{
+	color:gray;
+}
+.row1{
+	height:175px;
+	margin-left:15px;
+	margin-right:67px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.row2{
+	height:158px;
+	margin-left:15px;
+	margin-right:67px;
+}
+.column1{
+	width:332px;
+	float:left;
+	height:100%;
+}
+.column2{
+	width:344px;
+	height:100%
+}
+#header{
+	height:90px;
+}
+</style>
+</head><body>
+<div id="header"></div>
+<div class="row1">
+	<div class="column1">
+	<div>
+		<h5 style="margin-left:41px; margin-top:46px;">深圳华成</h5>
+		<label style="text-align:center; font-size:small; float:right; margin-right:30px;margin-top:-30px;">王兰燕</label>
+	</div>
+	<h4 style="text-align:center">深圳宝安区西乡固戍一路108号</h4>
+	<h4 style="text-align:center">正奇隆大厦8楼</h4>
+	<label style="font-size:small; float:left; width:95px;margin-left:25px;margin-top:0px;">0755-26417678</label>
+	<label style="text-align:center; font-size:small; float:right;width:128px;margin-top:0px;">18823780360</label>
+	</div>
+	<div class="column2">
+	</div>
+</div>
+<div class="row2">
+	<div class="column1">
+	{% if customer %}        
+	   <h5 style="margin-left:41px; margin-top:35px;" id="cusName">{{ customer.company_name }}</h5>
+	   <label style="text-align:center; font-size:small; float:right; margin-right:30px;margin-top:-35px;" id="cusMan">{{ customer.contact }}</label>
+	{% if customer.addr|length >= 15 %}
+	   <h4 style="text-align:center" id="cusAddr1">{{ customer.addr|slice:":15" }}</h4>
+        <h4 style="text-align:center" id="cusAddr2">{{ customer.addr|slice:"15:" }}</h4>   
+	{% else %}
+    	<h4 style="text-align:center" id="cusAddr1">{{ customer.addr }}</h4>
+    	<h4 style="text-align:center" id="cusAddr2">&nbsp;</h4>
+	{% endif %}
+	<label style="font-size:small; float:left; width:95px;margin-left:25px;margin-top:0px;" id="cusPhone">{{ customer.tel }}</label>
+	<label style="text-align:center; font-size:small; float:right;width:128px;margin-top:0px;" id="cusCell">{{ customer.phone }}</label>
+	{% endif %}
+	</div>
+	<div class="column2">
+	</div>
+</div>
+
+
+
+
+
+</body></html>

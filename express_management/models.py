@@ -4,8 +4,7 @@ class ExpressDelivery(models.Model):
     name = models.CharField(_('Express Name'), max_length=50)
     contact = models.CharField(_('Contact'), max_length=50, blank=True)
     tel = models.CharField(_('Tel'), max_length=15, blank=True)
-    note = models.TextField(_('Note'))
-    
+    note = models.TextField(_('Note'), blank=True)
     def __unicode__(self):
         return self.name
     

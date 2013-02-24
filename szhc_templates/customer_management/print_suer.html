@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+{% if customer %}
+<title>速尔|{{ customer.company_name }}</title>    
+{% else %}
+<title>速尔</title>
+{% endif %}
+<style type="text/css">
+body{
+	width:800px;
+	height:480px;
+	margin:0px 0px;
+}
+h4,h5,label{
+	color:gray;
+}
+.row1{
+	height:90px;
+	margin-left:15px;
+	margin-right:67px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.row2{
+	height:100px;
+	margin-left:15px;
+	margin-right:67px;
+}
+.column1{
+	width:432px;
+	float:left;
+	height:100%;
+}
+.column2{
+	width:0px;
+	height:100%
+}
+#header{
+	height:100px;
+}
+</style>
+</head><body>
+<div id="header"></div>
+<div class="row1">
+	<div class="column1">
+	<div>
+		<label style="text-align:center; font-size:small; float:left; margin-left:30px;margin-top:0px;">王兰燕</label>
+		<label style="font-size:small; float:left; width:95px;margin-left:140px;margin-top:0px;">0755-26417678</label>
+	</div>
+	<br>
+	<h5 style="margin-left:61px; margin-top:5px;">深圳市华成工业控制有限公司</h5>
+	<h4 style="text-align:center">深圳宝安区西乡固戍一路108号正奇隆大厦8楼</h4>
+	<h4 style="text-align:center"></h4>
+	<label style="text-align:center; font-size:small; float:right;width:128px;margin-top:5px;">&nbsp;</label>
+	</div>
+	<div class="column2">
+	</div>
+</div>
+<div class="row2">
+    {% if customer %}
+	<div class="column1">
+	<div>
+		<label id="cusMan" style="text-align:center; font-size:small; float:left; margin-left:30px;margin-top:6px;">{{ customer.contact }}</label>
+		<label id="cusPhone" style="font-size:small; float:left; width:95px;margin-left:200px;margin-top:6px;">{{ customer.phone }}</label>
+	</div>
+	<br>
+	<h5 id="cusName" style="margin-left:61px; margin-top:16px;float:left;">{{ customer.company_name }}</h5>
+	<br>
+	{% if customer.addr|length > 18 %}
+	<h4 style="text-align:center; clear:both" id="cusAddr1">{{ customer.addr|slice:":18" }}</h4>
+	<h4 style="text-align:center" id="cusAddr2">{{ customer.addr|slice:"18:" }}</h4>	    
+	{% else %}
+	<h4 style="text-align:center; clear:both" id="cusAddr1">{{ customer.addr }}</h4>
+	<h4 style="text-align:center" id="cusAddr2">&nbsp;</h4>
+	{% endif %}
+	<label style="text-align:center; font-size:small; float:right;width:128px;margin-top:s5px;">&nbsp;</label>
+	</div>
+    {% endif %}
+	<div class="column2">
+	</div>
+</div>
+
+
+
+
+
+</body></html>

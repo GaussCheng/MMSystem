@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="zh-cn" http-equiv="Content-Language">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<html>
+<head><title>打印快递单</title></head>
+<body>
+    {% if express_name %}
+        <h1>使用{{ express_name }}模版打印的客户清单</h1>
+    {% endif %}
+    {% if customers %}
+<!--     <script>
+        window.onload = function()
+        {
+            {% for customer in customers %}
+                // window.location.href("{{ template_url }}/{{ customer.code }}")
+                
+            {% endfor %}
+        }
+    </script> -->
+    <ol>
+    {% for customer in customers %}
+    <li>
+        <a href="{{ template_url }}/{{ customer.code }}" target="_blank" >{{ customer.company_name }}</a>
+    </li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+</body>
+</html>
